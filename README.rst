@@ -21,7 +21,7 @@ Detailed Notes:
 # acceleration/spike: fastest/quickest threshold reacher
 
 # 1. count all the lookups per IP for 1 min
-# 2.  check if the threshold for above IP is reached - cache the threshold counter for 1 mins
+# 2. check if the threshold for above IP is reached - cache the threshold counter for 1 mins
 # 3. if threshold is hit, increment rate counter by 1
 # 4. expire counters and data from tables after 1 min
 # 5. check if rate_counter > rolling_threshold
