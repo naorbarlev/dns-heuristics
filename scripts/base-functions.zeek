@@ -11,24 +11,25 @@ export {
 
 function check_threshold(v: vector of count, idx: table[addr] of count,
     orig: addr, n: count): bool
-{
-	#print fmt ("orig: %s and IDX_orig: %s and n is: %s and v[idx[orig]] is: %s", orig, idx[orig], n, v[idx[orig]]);
-	if ( idx[orig] < |v| && n >= v[idx[orig]] ) {
+	{
+	if ( idx[orig] < |v| && n >= v[idx[orig]] )
+		{
 		++idx[orig];
 
 		return ( T );
-	} else
+		}
+	else
 		return ( F );
-}
+	}
 
 function log_reporter(msg: string, debug: count)
-{
+	{
 	#if (debug < 10)
 	#       return ;
 
 @if ( ! Cluster::is_enabled() )
-	print fmt("%s", msg);
+	#print fmt("%s", msg);
 @endif
 
 	event reporter_info(network_time(), msg, peer_description);
-}
+	}

@@ -6,4 +6,4 @@ module DNS;
 @load ./txt.zeek
 @load ./dns-hitters.zeek
 @load ./zonetransfer.zeek
-@load ./dns-notice-policy.zeek
+#@load ./dns-notice-policy.zeek
